@@ -1,3 +1,5 @@
+require "rails_helper"
+
 describe "/add" do
   it "has a functional URL", points: 1 do
     visit "/add"
@@ -472,7 +474,7 @@ describe "/subtract" do
     find("button", :text => /Subtract/i).click
 
     expect(page).to have_content(/41.5/),
-      "Expected results page of the form to display 41.5 when inputs are 69 and 27.5, but didn't."
+      "Expected results page of the form to display 42.5 when inputs are 69 and 27.5, but didn't."
   end
 end
 # end sub results
@@ -585,3 +587,4 @@ describe "/divide" do
       "Expected results page of the form to display the quotient of 15.5 (when inputs are 62 and 4), but didn't."
   end
 end
+
